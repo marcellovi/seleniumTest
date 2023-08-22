@@ -20,7 +20,7 @@ describe('Membership Abm', function() {
     await driver.findElement(By.name("password")).sendKeys("qNFh$Vv6SC_/$xk")
     await driver.findElement(By.css(".btn-block")).click()
 
-    //await driver.findElement(By.xpath("//a[@id='toggle-sidebar']")).click()
+    await driver.findElement(By.xpath("//a[@id='toggle-sidebar']")).click()
     await driver.findElement(By.linkText("Membership ABM")).click()
     await driver.findElement(By.id("create-a-member-nav-item")).click()
 
