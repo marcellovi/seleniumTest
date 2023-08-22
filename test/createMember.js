@@ -57,16 +57,19 @@ describe('Membership Abm', function() {
       //const dropdown = await driver.findElement(By.name("list_telephone_type_id"))
       //await dropdown.findElement(By.xpath("//option[. = 'Oficina']")).click()
     }
-    await new Promise(r => setTimeout(r, 2000));
+
     await driver.findElement(By.name("phone_number")).sendKeys("111")
     await driver.findElement(By.name("extension")).sendKeys("333")
     await driver.findElement(By.name("first_name")).sendKeys("Chaves")
     await driver.findElement(By.name("last_name")).sendKeys("Chavisco")
     await driver.findElement(By.name("title")).sendKeys("Senor")
-    await new Promise(r => setTimeout(r, 2000));
+
     await driver.findElement(By.css(".account")).click()
     await driver.findElement(By.linkText("Salir")).click()
     //await driver.findElement(By.css(".dropdown-toggle > .fas")).click()
     //await driver.findElement(By.linkText("Salir")).click()
+
+    // close the browser
+    await driver.quit();
   })
 })
