@@ -21,6 +21,8 @@ describe('Membership Abm', function() {
     await driver.findElement(By.css(".btn-block")).click()
     await driver.findElement(By.linkText("Membership ABM")).click()
     await driver.findElement(By.id("create-a-member-nav-item")).click()
+    
+    await new Promise(r => setTimeout(r, 2000)); // similar to sleep 
     await driver.findElement(By.linkText("Membership ABM")).click()
     await driver.findElement(By.id("create-a-member-nav-item")).click()
     await driver.findElement(By.name("name")).sendKeys("Alejandro")
