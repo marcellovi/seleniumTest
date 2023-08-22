@@ -19,12 +19,14 @@ describe('Membership Abm', function() {
     await driver.findElement(By.name("email")).sendKeys("esilvas@gobrangus.com")
     await driver.findElement(By.name("password")).sendKeys("qNFh$Vv6SC_/$xk")
     await driver.findElement(By.css(".btn-block")).click()
-    await driver.findElement(By.linkText("Membership ABM")).click()
-    await driver.findElement(By.id("create-a-member-nav-item")).click()
-    
     await new Promise(r => setTimeout(r, 2000)); // similar to sleep 
     await driver.findElement(By.linkText("Membership ABM")).click()
+    await new Promise(r => setTimeout(r, 2000)); // similar to sleep 
     await driver.findElement(By.id("create-a-member-nav-item")).click()
+
+    
+   // await driver.findElement(By.linkText("Membership ABM")).click()
+   // await driver.findElement(By.id("create-a-member-nav-item")).click()
     await driver.findElement(By.name("name")).sendKeys("Alejandro")
     await driver.findElement(By.name("dba")).sendKeys("DBA")
     {
