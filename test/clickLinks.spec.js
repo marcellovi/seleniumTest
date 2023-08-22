@@ -23,6 +23,8 @@ describe('Click Links', function() {
     await driver.findElement(By.name("password")).sendKeys("qNFh$Vv6SC_/$xk")
     await driver.findElement(By.css(".btn-block")).click()
     await new Promise(r => setTimeout(r, 2000));
+    await driver.findElement(By.xpath("//a[@id='toggle-sidebar']")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.linkText("Animales")).click()
     await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.linkText("Animales")).click()
