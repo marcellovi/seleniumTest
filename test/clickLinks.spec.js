@@ -15,7 +15,8 @@ describe('Click Links', function() {
   })
   it('Click Links', async function() {
     await driver.get("http://abm-test.goregstr.com/login")
-    await driver.manage().window().setRect({ width: 1559, height: 769 })
+    //await driver.manage().window().setRect({ width: 1559, height: 769 })
+    driver.manage().window().maximize();
     await driver.findElement(By.name("email")).click()
     await driver.findElement(By.name("email")).sendKeys("esilvas@gobrangus.com")
     await driver.findElement(By.name("password")).sendKeys("qNFh$Vv6SC_/$xk")
