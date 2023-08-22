@@ -15,21 +15,25 @@ describe('Membership Abm', function() {
   })
   it('Create Member', async function() {
     await driver.get("http://abm-test.goregstr.com/login")
+    driver.manage().window().maximize();
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.name("email")).click()
     await driver.findElement(By.name("email")).sendKeys("esilvas@gobrangus.com")
     await driver.findElement(By.name("password")).sendKeys("qNFh$Vv6SC_/$xk")
     await driver.findElement(By.css(".btn-block")).click()
-
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.xpath("//a[@id='toggle-sidebar']")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.linkText("Membership ABM")).click()
     await driver.findElement(By.id("create-a-member-nav-item")).click()
 
     await driver.findElement(By.name("name")).sendKeys("Alejandro")
     await driver.findElement(By.name("dba")).sendKeys("DBA")
-
+    await new Promise(r => setTimeout(r, 2000));
     {
       const dropdown = await driver.findElement(By.name("member_type_id"))
       await dropdown.findElement(By.css("*[value='1']")).click()
+      await new Promise(r => setTimeout(r, 2000));
     }
     //await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.name("email")).sendKeys("alejandro@gmail.com")
