@@ -20,6 +20,7 @@ describe('Membership Abm', function() {
     await driver.findElement(By.name("password")).sendKeys("qNFh$Vv6SC_/$xk")
     await driver.findElement(By.css(".btn-block")).click()
 
+    await new Promise(r => setTimeout(r, 2000)); // similar to sleep 
     await driver.findElement(By.xpath("//a[@id='toggle-sidebar']")).click()
     await new Promise(r => setTimeout(r, 2000)); // similar to sleep 
     await driver.findElement(By.linkText("Membership ABM")).click()
@@ -31,24 +32,28 @@ describe('Membership Abm', function() {
    // await driver.findElement(By.id("create-a-member-nav-item")).click()
     await driver.findElement(By.name("name")).sendKeys("Alejandro")
     await driver.findElement(By.name("dba")).sendKeys("DBA")
+    await new Promise(r => setTimeout(r, 2000));
     {
-      const dropdown = await driver.findElement(By.name("member_type_id"))
-      await dropdown.findElement(By.xpath("//option[. = 'Socio']")).click()
+      
+      //const dropdown = await driver.findElement(By.name("member_type_id"))
+      //await new Promise(r => setTimeout(r, 2000));
+      //await dropdown.findElement(By.xpath("//option[. = 'Socio']")).click()
     }
+    //await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.name("email")).sendKeys("alejandro@gmail.com")
     await driver.findElement(By.name("password")).sendKeys("123456")
     await driver.findElement(By.name("billing_email")).sendKeys("alejandro@gmail.com")
     {
-      const dropdown = await driver.findElement(By.name("animal_hold_brand_location_id"))
-      await dropdown.findElement(By.xpath("//option[. = 'Caderda Izquierda']")).click()
+      //const dropdown = await driver.findElement(By.name("animal_hold_brand_location_id"))
+      //await dropdown.findElement(By.xpath("//option[. = 'Caderda Izquierda']")).click()
     }
     {
-      const dropdown = await driver.findElement(By.name("animal_private_herd_number_location_id"))
-      await dropdown.findElement(By.xpath("//option[. = 'Caderda Izquierda']")).click()
+      //const dropdown = await driver.findElement(By.name("animal_private_herd_number_location_id"))
+      //await dropdown.findElement(By.xpath("//option[. = 'Caderda Izquierda']")).click()
     }
     {
-      const dropdown = await driver.findElement(By.name("list_address_type_id"))
-      await dropdown.findElement(By.xpath("//option[. = 'Rancho']")).click()
+      //const dropdown = await driver.findElement(By.name("list_address_type_id"))
+      //await dropdown.findElement(By.xpath("//option[. = 'Rancho']")).click()
     }
     await driver.findElement(By.name("line1")).sendKeys("Direccion Direita")
     await driver.findElement(By.name("city")).sendKeys("Mexicano")
@@ -56,17 +61,19 @@ describe('Membership Abm', function() {
     await driver.findElement(By.id("vs1__option-59")).click()
     await driver.findElement(By.name("postal_code")).sendKeys("11111")
     {
-      const dropdown = await driver.findElement(By.name("list_telephone_type_id"))
-      await dropdown.findElement(By.xpath("//option[. = 'Oficina']")).click()
+      //const dropdown = await driver.findElement(By.name("list_telephone_type_id"))
+      //await dropdown.findElement(By.xpath("//option[. = 'Oficina']")).click()
     }
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.name("phone_number")).sendKeys("111")
     await driver.findElement(By.name("extension")).sendKeys("333")
     await driver.findElement(By.name("first_name")).sendKeys("Chaves")
     await driver.findElement(By.name("last_name")).sendKeys("Chavisco")
     await driver.findElement(By.name("title")).sendKeys("Senor")
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.css(".account")).click()
     await driver.findElement(By.linkText("Salir")).click()
-    await driver.findElement(By.css(".dropdown-toggle > .fas")).click()
-    await driver.findElement(By.linkText("Salir")).click()
+    //await driver.findElement(By.css(".dropdown-toggle > .fas")).click()
+    //await driver.findElement(By.linkText("Salir")).click()
   })
 })
