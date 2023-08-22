@@ -17,19 +17,30 @@ describe('Click Links', function() {
     await driver.get("http://abm-test.goregstr.com/login")
     //await driver.manage().window().setRect({ width: 1559, height: 769 })
     driver.manage().window().maximize();
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.name("email")).click()
     await driver.findElement(By.name("email")).sendKeys("esilvas@gobrangus.com")
     await driver.findElement(By.name("password")).sendKeys("qNFh$Vv6SC_/$xk")
     await driver.findElement(By.css(".btn-block")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.linkText("Animales")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.linkText("Animales")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.linkText("Facturación")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.css("#invoices-nav-item > span")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.linkText("Cría")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.id("nba-nav-item")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.linkText("Membership ABM")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.id("create-a-member-nav-item")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.css(".account")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.css(".fa-sign-out-alt")).click()
   })
 })

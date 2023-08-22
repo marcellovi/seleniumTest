@@ -68,7 +68,5 @@ describe('Membership Abm', function() {
     //await driver.findElement(By.css(".dropdown-toggle > .fas")).click()
     //await driver.findElement(By.linkText("Salir")).click()
 
-    // close the browser
-    await driver.quit();
   })
 })
