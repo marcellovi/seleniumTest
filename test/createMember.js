@@ -25,8 +25,9 @@ describe('Membership Abm', function() {
     await driver.findElement(By.xpath("//a[@id='toggle-sidebar']")).click()
     await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.linkText("Membership ABM")).click()
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.id("create-a-member-nav-item")).click()
-
+    await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.name("name")).sendKeys("Alejandro")
     await driver.findElement(By.name("dba")).sendKeys("DBA")
     await new Promise(r => setTimeout(r, 2000));
