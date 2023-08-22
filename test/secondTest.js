@@ -66,7 +66,7 @@ describe("add second todo test",function(){  // Test Suite
         await new Promise(r => setTimeout(r, 2000)); // similar to sleep 
         
         // assert using chai should  ( should uses the value that you want to validate )
-        todoText.should.equal('Do not Learn Javascript');
+        todoText.should.equal('Learn Javascript');
 
         // close the browser
         await driver.quit();
