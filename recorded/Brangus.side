@@ -569,6 +569,13 @@
       "target": "css=.dropdown-toggle > .fas",
       "targets": [],
       "value": ""
+    }, {
+      "id": "1f55e243-7177-414c-ad22-f3b8f16c4311",
+      "comment": "",
+      "command": "",
+      "target": "css=.logged-in:nth-child(3)",
+      "targets": [],
+      "value": ""
     }]
   }, {
     "id": "d31156e8-9054-4a6d-8431-54600bc2335c",
@@ -813,14 +820,14 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["7895a59b-d957-4894-85a2-d740c485cc0f"]
+    "tests": []
   }, {
     "id": "b9b5fa33-b5b3-4d83-9ee2-fea4eab4bc1a",
     "name": "Invoices",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["d31156e8-9054-4a6d-8431-54600bc2335c"]
+    "tests": []
   }],
   "urls": ["http://abm-test.goregstr.com/"],
   "plugins": []
