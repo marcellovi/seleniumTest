@@ -15,7 +15,7 @@ describe('Click Links', function() {
   })
   it('Click Links', async function() {
     await driver.get("http://abm-test.goregstr.com/login")
-    //await driver.manage().window().setRect({ width: 1559, height: 769 })
+    //await driver.manage().window().setRect({ width: 1559, height: 769 }) remove
     driver.manage().window().maximize();
     await new Promise(r => setTimeout(r, 2000));
     await driver.findElement(By.name("email")).click()
