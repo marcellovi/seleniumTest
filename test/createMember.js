@@ -3,7 +3,7 @@ const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
 describe('Membership Abm', function() {
-  //this.timeout(30000)
+  this.timeout(60000)
   let driver
   let vars
   beforeEach(async function() {
@@ -41,16 +41,19 @@ describe('Membership Abm', function() {
     await driver.findElement(By.name("password")).sendKeys("123456")
     await driver.findElement(By.name("billing_email")).sendKeys("alejandro@gmail.com")
     {
-      //const dropdown = await driver.findElement(By.name("animal_hold_brand_location_id"))
-      //await dropdown.findElement(By.xpath("//option[. = 'Caderda Izquierda']")).click()
+      const dropdown = await driver.findElement(By.name("animal_hold_brand_location_id"))
+      await dropdown.findElement(By.css("*[value='1']")).click()
+      await new Promise(r => setTimeout(r, 2000));
     }
     {
-      //const dropdown = await driver.findElement(By.name("animal_private_herd_number_location_id"))
-      //await dropdown.findElement(By.xpath("//option[. = 'Caderda Izquierda']")).click()
+      const dropdown = await driver.findElement(By.name("animal_private_herd_number_location_id"))
+      await dropdown.findElement(By.css("*[value='2']")).click()
+      await new Promise(r => setTimeout(r, 2000));
     }
     {
-      //const dropdown = await driver.findElement(By.name("list_address_type_id"))
-      //await dropdown.findElement(By.xpath("//option[. = 'Rancho']")).click()
+      const dropdown = await driver.findElement(By.name("list_address_type_id"))
+      await dropdown.findElement(By.css("*[value='3']")).click()
+      await new Promise(r => setTimeout(r, 2000));
     }
     await driver.findElement(By.name("line1")).sendKeys("Direccion Direita")
     await driver.findElement(By.name("city")).sendKeys("Mexicano")
@@ -58,8 +61,9 @@ describe('Membership Abm', function() {
     await driver.findElement(By.id("vs1__option-59")).click()
     await driver.findElement(By.name("postal_code")).sendKeys("11111")
     {
-      //const dropdown = await driver.findElement(By.name("list_telephone_type_id"))
-      //await dropdown.findElement(By.xpath("//option[. = 'Oficina']")).click()
+      const dropdown = await driver.findElement(By.name("list_telephone_type_id"))
+      await dropdown.findElement(By.css("*[value='2']")).click()
+      await new Promise(r => setTimeout(r, 2000));
     }
 
     await driver.findElement(By.name("phone_number")).sendKeys("111")
@@ -67,11 +71,10 @@ describe('Membership Abm', function() {
     await driver.findElement(By.name("first_name")).sendKeys("Chaves")
     await driver.findElement(By.name("last_name")).sendKeys("Chavisco")
     await driver.findElement(By.name("title")).sendKeys("Senor")
+    await new Promise(r => setTimeout(r, 2000));
 
     await driver.findElement(By.css(".account")).click()
     await driver.findElement(By.linkText("Salir")).click()
-    //await driver.findElement(By.css(".dropdown-toggle > .fas")).click()
-    //await driver.findElement(By.linkText("Salir")).click()
 
   })
 })
