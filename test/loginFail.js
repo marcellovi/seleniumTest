@@ -18,6 +18,7 @@ describe('Click Links', function() {
     //await driver.manage().window().setRect({ width: 1559, height: 769 }) remove
     driver.manage().window().maximize();
     await new Promise(r => setTimeout(r, 2000));
+    
     await driver.findElement(By.name("email")).click()
     await driver.findElement(By.name("email")).sendKeys("esilvas@gobrangus.com")
     await driver.findElement(By.name("password")).sendKeys("qNFh$Vv6SC_/$xkx") // wrong password
