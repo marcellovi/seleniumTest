@@ -45,7 +45,7 @@ describe('dashboard top search', function() {
     }
     //await new Promise(r => setTimeout(r, 2000));
     {
-      const elements = await driver.findElements(By.css(".no-results-textc"))
+      const elements = await driver.findElements(By.css(".no-results-text"))
       assert(elements.length)
     }
   })
